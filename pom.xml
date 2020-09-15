@@ -41,8 +41,8 @@
                             <templatePath>${project.basedir}/src/main/resources/templates/</templatePath>
                             <!-- Defaults: -->
                             <!--<outputDirectory>${project.build.directory}/generated-sources/</outputDirectory>-->
-                            <!--<ejb3>false</ejb3>-->
-                            <!--<jdk5>false</jdk5>-->
+                            <!--<ejb3>false</ejb3>
+                            <jdk5>true</jdk5>-->
                         </configuration>
                     </execution>
                     <execution>
@@ -80,13 +80,17 @@
                     <!--<createCollectionForForeignKey>true</createCollectionForForeignKey>-->
                     <!--<createManyToOneForForeignKey>true</createManyToOneForForeignKey>-->
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <!-- DB Driver of your choice -->
+                <dependencies>  <!-- DB Driver of your choice 
+                    <dependency>                      
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>${h2.version}</version>
-                    </dependency>
+                    </dependency>-->
+                    <dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>8.0.16</version>
+					</dependency>
                 </dependencies>
             </plugin>
         </plugins>

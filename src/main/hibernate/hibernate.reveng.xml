@@ -4,8 +4,8 @@
 <hibernate-reverse-engineering>
 
     <type-mapping>
-        <sql-type jdbc-type="DATE" hibernate-type="java.time.LocalDate"/>
-        <sql-type jdbc-type="TIMESTAMP" hibernate-type="java.time.LocalDateTime"/>
+        <sql-type jdbc-type="DATE" hibernate-type="java.util.Date"/> <!--java.time.LocalDate-->
+        <sql-type jdbc-type="TIMESTAMP" hibernate-type="java.util.Date"/> <!--java.time.LocalDateTime-->
     </type-mapping>
 
 </hibernate-reverse-engineering>
